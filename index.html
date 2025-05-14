@@ -1,12 +1,30 @@
 <html>
-    <title>One Frog A Hour</title>
     <script>
+        let saidno = false
         function no() {
+            saidno = true
             alert('.. Then why are you here?')
         }
 
         function yes() {
             alert('Wonderful!')
+        }
+
+        function optout() {
+            window.open('https://forms.gle/4NHUF97RqoiZCJNH7')
+        }
+
+        function signup() {
+            if (saidno) {
+                alert('.. you said no?')
+                alert('...')
+                alert('Buddy.')
+                alert('Just reload the page.')
+                alert("Actually, I'll do it for you.")
+                location.reload()
+                return;
+            }
+            window.open('https://forms.gle/rYRoAisuUud3rTAx9')
         }
     </script>
     <head>
@@ -26,6 +44,7 @@
 
             button {
                 text-align: center;
+                background-color: chartreuse;
             }
         </style>
       </head>
@@ -56,6 +75,7 @@
         <p>Are you ready?</p>
         <p>Join today! No fee!</p>
 
-        <a href="https://forms.gle/rYRoAisuUud3rTAx9">Sign Up!</a>
+        <button onclick="signup()">Sign Up!</button>
+        <button onclick="optout()">Opt-Out..!</button>
     </body>
 </html>
